@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family:'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: rgb(76, 40, 143);
+    padding: 20px 15px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 80, 153);
+}
+
+h2 {
+    text-align: center;
+    color: rgb(255, 80, 153);
+    margin-top: 20px;
+}
+footer {
+    background-color: rgb(76, 40, 143);
+    padding: 20px 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+    position: center;
+    width: 250px;
+    height: 250px;
+    border: 5px solid rgb(255, 80, 153);
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    box-shadow: rgb(104, 26, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    transition: 0.5s transform ease-in-out;
+    margin-bottom: 50px;
+}
+.card::after {
+    content: "www";
+    display: block;
+    width: 240px;
+    height: 240px;
+    background-color: rgb(243, 121, 223);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card-show {
+    transform: rotateY(180deg);
+}
